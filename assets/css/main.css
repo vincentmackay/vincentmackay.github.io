@@ -71,6 +71,8 @@ body {
 	
 }
 
+
+
 mark {
 	background-color: transparent;
 	color: inherit;
@@ -3339,3 +3341,41 @@ p.mailing{
 	line-height: 1.2;
 }
 
+button.collapsible{
+  background-color: inherit;
+  color: inherit;
+  cursor: inherit;
+  padding: inherit;
+  width: inherit;
+  border: inherit;
+  text-align: inherit;
+  outline: inherit;
+  font-size: inherit;
+}
+
+.collapsible_content {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.collapsible:after {
+  content: ' \02795'; /* Unicode character for "plus" sign (+) */
+/*
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+*/
+}
+
+.collapsible.active:after {
+  content: " \2796"; /* Unicode character for "minus" sign (-) */
+}
+
+
+.collapsible:hover {
+  background: rgba(0, 0, 0, 0.05) 
+}
